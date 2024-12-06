@@ -1,0 +1,328 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0px;
+    background-color: #fafafa80;
+    display: flex;
+    justify-content: center;
+
+    nav {
+        width: 1280px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+            a {
+                color: #464646;
+                text-decoration: none;
+                transition: .5s ease;
+
+                &:hover {
+                    color: #000000;
+                }
+            }
+        }
+
+        .menu {
+            display: flex;
+            gap: 16px;
+
+
+        }
+
+
+
+    }
+}
+
+a.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 0 8px;
+    height: 32px;
+    border: 1px solid #fafafa;
+    border-radius: 4px;
+    background-color: #fafafa80;
+    box-shadow: 0px 0px 8px #00000020;
+    text-decoration: none;
+    color: #464646;
+
+    &:hover {
+        background-color: #fafafac0;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/sydney-australia-1080.webp);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: bgImage 30s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+        content: "Sydney, Australia - by Adobe Stock";
+        font-size: 14px;
+        color: #fafafac0;
+        text-shadow: 0px 0px 4px #000000;
+        width: fit-content;
+        height: 20px;
+        position: absolute;
+        top: 80px;
+        left: 16px;
+        animation: credits 30s linear infinite;
+    }
+}
+
+form.login {
+    width: 300px;
+
+    border: 1px solid #fafafa;
+    border-radius: 16px;
+    background-color: #fafafa80;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 8px #00000080;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="submit"],
+    button {
+        width: 100%;
+        height: 48px;
+        padding: 0 8px;
+        font-size: 18px;
+    }
+
+    p {
+        color: #464646;
+    }
+
+    a {
+        text-decoration: none;
+        color: #fafafa;
+        text-shadow: 0px 0px 4px #00000080;
+        transition: .5s;
+
+        &:hover {
+            color: #464646;
+        }
+    }
+}
+
+.welcome {
+    width: 600px;
+    height: 300px;
+    border: 1px solid #fafafa;
+    border-radius: 16px;
+    background-color: #fafafa80;
+    backdrop-filter: blur(4px);
+    box-shadow: 0px 0px 8px #00000080;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    align-items: center;
+
+    h1 {
+        color: #464646;
+    }
+}
+
+footer {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    background-color: #fafafa20;
+
+    p {
+        color: #fafafa;
+        text-shadow: 0px 0px 2px #00000080;
+    }
+}
+
+@keyframes bgImage {
+    0% {
+        background-image: url(../assets/sydney-australia-1080.webp);
+
+        &::before {
+            content: "Sydney, Australia - by Adobe Stock";
+        }
+    }
+
+    15% {
+        background-image: url(../assets/sydney-australia-1080.webp);
+
+        &::before {
+            content: "Sydney, Australia - by Adobe Stock";
+        }
+    }
+
+    20% {
+        background-image: url(../assets/california-usa-1080.webp);
+
+        &::before {
+            content: "California, USA - by Adobe Stock";
+        }
+    }
+
+    35% {
+        background-image: url(../assets/california-usa-1080.webp);
+    }
+
+    40% {
+        background-image: url(../assets/new-zeland-1080.webp);
+    }
+
+    55% {
+        background-image: url(../assets/new-zeland-1080.webp);
+    }
+
+    60% {
+        background-image: url(../assets/sao-paulo-1080.webp);
+    }
+
+    75% {
+        background-image: url(../assets/sao-paulo-1080.webp);
+    }
+
+    80% {
+        background-image: url(../assets/spain-madrid-1080.webp);
+    }
+
+    95% {
+        background-image: url(../assets/spain-madrid-1080.webp);
+    }
+
+    100% {
+        background-image: url(../assets/sydney-australia-1080.webp);
+    }
+}
+
+@media(max-width: 1366px) {
+    @keyframes bgImage {
+        0% {
+            background-image: url(../assets/sydney-australia-768.webp);
+        }
+
+        15% {
+            background-image: url(../assets/sydney-australia-768.webp);
+        }
+
+        20% {
+            background-image: url(../assets/california-usa-768.webp);
+        }
+
+        35% {
+            background-image: url(../assets/california-usa-768.webp);
+        }
+
+        40% {
+            background-image: url(../assets/new-zeland-768.webp);
+        }
+
+        55% {
+            background-image: url(../assets/new-zeland-768.webp);
+        }
+
+        60% {
+            background-image: url(../assets/sao-paulo-768.webp);
+        }
+
+        75% {
+            background-image: url(../assets/sao-paulo-768.webp);
+        }
+
+        80% {
+            background-image: url(../assets/spain-madrid-768.webp);
+        }
+
+        95% {
+            background-image: url(../assets/spain-madrid-768.webp);
+        }
+
+        100% {
+            background-image: url(../assets/sydney-australia-768.webp);
+        }
+    }
+}
+
+@keyframes credits {
+    0% {
+        content: "Sydney, Australia - by Peter Kolejak, from Adobe Stock";
+    }
+
+    15% {
+        content: "Sydney, Australia - by Peter Kolejak, from Adobe Stock";
+    }
+
+    20% {
+        content: "California, USA - by Tierney, from Adobe Stock";
+    }
+
+    35% {
+        content: "California, USA - by Tierney, from Adobe Stock";
+    }
+
+    40% {
+        content: "Cathedral Cove, New Zealand - by Dmitry Pichugin, from Adobe Stock";
+    }
+
+    55% {
+        content: "Cathedral Cove, New Zealand - by Dmitry Pichugin, from Adobe Stock";
+    }
+
+    60% {
+        content: "São Paulo, Brasil - by Donatas Dabravolskas, from Adobe Stock";
+    }
+
+    75% {
+        content: "São Paulo, Brasil - by Donatas Dabravolskas, from Adobe Stock";
+    }
+
+    80% {
+        content: "Madrid, España - by Sean Pavone, from Adobe Stock";
+    }
+
+    95% {
+        content: "Madrid, España - by Sean Pavone, from Adobe Stock";
+    }
+
+    100% {
+        content: "Sydney, Australia - by Peter Kolejak, from Adobe Stock";
+    }
+}

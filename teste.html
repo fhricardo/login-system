@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Senha</title>
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .success {
+            color: green;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form-senha">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required><br><br>
+
+        <label for="novasenha">Confirmar Senha:</label>
+        <input type="password" id="novasenha" name="novasenha" required onblur="novaSenha()"><br><br>
+
+        <span id="alert"></span><br><br>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <script>
+        function novaSenha() {
+            const senha = document.getElementById('senha').value; // Obtém a senha digitada
+            const novasenha = document.getElementById('novasenha').value; // Obtém a confirmação da senha
+            const msg = document.getElementById('alert'); // Seleciona o elemento para exibir mensagens
+
+            if (novasenha !== senha) {
+                msg.innerHTML = "As senhas não coincidem!";
+                msg.className = "error"; // Define estilo para erro
+            } else {
+                msg.innerHTML = "Tudo ok!";
+                msg.className = "success"; // Define estilo para sucesso
+            }
+        }
+    </script>
+</body>
+
+</html>
